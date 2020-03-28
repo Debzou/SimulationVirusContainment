@@ -15,13 +15,22 @@ fun main(args: Array<String>){
     val numberDays : Int = prop.getProperty("world.days").toInt()
     val numberOut : Int = prop.getProperty("world.outPerson").toInt()
     val probability : Double = prop.getProperty("world.probability").toDouble()
+    val percentage : Double = prop.getProperty("world.percentageOutside").toDouble()
+    val daysBefore : Int = prop.getProperty("world.daysWithoutContainment").toInt()
     println("Start simulation")
 
-    // test first days
+    // the infected arrive in the world
     world.initWorld(numberPerson , numberMeeting, probability)
     println("The world is init")
 
-    // containement
+    // days without containment
+    println((numberPerson*percentage).toInt())
+    for(i in 0 until daysBefore){
+        world.day((numberPerson*percentage).toInt())
+    }
+
+    // the epidemic is too important
+    // that why containment is put in place
     for(i in 0 until numberDays step 1) {
        world.day(numberOut)
     }
