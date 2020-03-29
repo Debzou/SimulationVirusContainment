@@ -19,18 +19,17 @@ public class World {
         var randomContamination : Double
         //println("I am in contact with you")
         for (i in 0 until this.numberOfMeeting step 1){
-            if (person.infected){
-                // if the person is infected
-                // random value between 0 and numberOfMeeting
-                randomValue = ThreadLocalRandom.current().nextInt(this.numberOfPerson)
-                current = this.listPerson[randomValue]
-                randomContamination = ThreadLocalRandom.current().nextDouble()
-                if (current.id != person.id && !current.infected && randomContamination < this.probability){
-                    // test if current is not the same that person
-                    // and if current is not infected
-                    this.listPerson[randomValue].getSick()
-                }
+            // if the person is infected
+            // random value between 0 and numberOfMeeting
+            randomValue = ThreadLocalRandom.current().nextInt(this.numberOfPerson)
+            current = this.listPerson[randomValue]
+            randomContamination = ThreadLocalRandom.current().nextDouble()
+            if (current.id != person.id && !current.infected && randomContamination < this.probability){
+                // test if current is not the same that person
+                // and if current is not infected
+                this.listPerson[randomValue].getSick()
             }
+
 
         }
 
@@ -59,9 +58,12 @@ public class World {
         var count : Int = 0
         for (i in 0 until outPerson step 1){
             // Men / Women outsider
-            var randomValue = ThreadLocalRandom.current().nextInt(this.numberOfMeeting)
+            var randomValue = ThreadLocalRandom.current().nextInt(this.numberOfPerson)
             var current = this.listPerson[randomValue]
-            this.meeting(current)
+            if (current.infected){
+                this.meeting(current)
+            }
+
         }
         for (item in this.listPerson){
             if (item.infected){
