@@ -69,3 +69,6 @@ end simulation
 ```
 
 ![](screen.png)
+
+### Opinion
+To conclude, we note that the containment makes it possible to break and attenuate the contamination. This is why containment is useful to reduce the increase. On the other hand, to stop an epidemic it is necessary to separate the sick and the non-infected (see the case in Singapore).
