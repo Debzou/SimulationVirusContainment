@@ -22,7 +22,7 @@ fun main(args: Array<String>){
     val daysBefore : Int = prop.getProperty("world.daysWithoutContainment").toInt()
     println("Start simulation")
 
-    // the infected arrive in the world
+    // the infected are arriving in the world
     world.initWorld(numberPerson , numberMeeting, probability)
     println("The world is init")
 
