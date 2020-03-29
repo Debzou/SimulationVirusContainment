@@ -34,7 +34,7 @@ world.outPerson = 120
 here's my configuration, in my simulation of the world at 120,000 people.
 Of the 120 000 people, 5% are in contact with 2 people (6000 people). And the propagation will last 3 days.  Then there will be 14 days of confinement. That is to say that the percentage of contact will be reduced by 0.95% (300 people).
 
-### resulat 
+### Resulat 
 ```bash
 Start simulation
 number of infected : 1
