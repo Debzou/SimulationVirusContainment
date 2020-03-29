@@ -68,4 +68,4 @@ end simulation
 
 ```
 
-[](screen.png)
+![](screen.png)
