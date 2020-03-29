@@ -66,5 +66,6 @@ number of infected : 48592
 number of infected : 51267
 end simulation
 
-
 ```
+
+[](screen.png)
