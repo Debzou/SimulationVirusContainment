@@ -4,7 +4,7 @@
 [what's koltin](https://kotlinlang.org/)
 
 ### Go to the file config.properties
-change the values of the simulation
+change the values of the simulation. \n
 Be careful ! Percentages are numbers between 0 and 1. 
 
 ```python
